@@ -14,11 +14,11 @@ What does it do?
 It uses the `option`s from the `select` elements to which it is applied as a datasource for jQuery UI's autocomplete.
 
 It also takes a few liberties:
-1. If you tab over without selecting an item, it will select the first item from the list of matches for you.
-2. If you tab over and there were no matches, it clears the text field of input to make it clear no option was selected.
-3. Comparisons are case-insensitive.
-4. It hides the `select` element, and displays a text field for jQuery UI's autocomplete to take over.
-5. It renames the `select` element to nothing, and uses it's name on a hidden `input` that gets submitted to the server instead.
+1.  If you tab over without selecting an item, it will select the first item from the list of matches for you.
+2.  If you tab over and there were no matches, it clears the text field of input to make it clear no option was selected.
+3.  Comparisons are case-insensitive.
+4.  It hides the `select` element, and displays a text field for jQuery UI's autocomplete to take over.
+5.  It renames the `select` element to nothing, and uses it's name on a hidden `input` that gets submitted to the server instead.
 
 How do I use it?
 ----------------
