@@ -7,7 +7,7 @@ I felt jQuery UI's autocomplete should be useable with a call like:
 ````javascript
   $('select').autocomplete_from_select(); 
 ````
-So I made it happen.
+So I made it happen. 
 
 What does it do?
 ----------------
@@ -22,7 +22,9 @@ It also takes a few liberties:
 
 How do I use it?
 ----------------
-The following would replace all selects on the page with an autocomplete field. You can change the selector 
+First you need to make sure you include jQuery and enough of jQuery UI to have autocomplete support. Then stick the file `jquery.autocomplete_from_select.js` in your project and load it as well.
+
+To use it, the following would replace all selects on the page with an autocomplete field. You can change the selector 
 to whatever you like to limit the applicability. 
 
 ````javascript
