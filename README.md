@@ -58,3 +58,4 @@ and set `additional-match-attributes` like this:
 
 It will match the option shown above if the user starts typing "abc" or if the user starts typing "blam!"
 
+By [Sammy Larbi](http://www.codeodor.com)
