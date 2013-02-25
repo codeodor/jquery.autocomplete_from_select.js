@@ -53,6 +53,7 @@
       element.attr('name','');
       
       textField.autocomplete({
+        minLength: 0,
         source: function(request, response){
           var matches = [];
           try {
