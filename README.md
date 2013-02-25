@@ -20,6 +20,7 @@ It also takes a few liberties:
 3. Comparisons are case-insensitive.
 4. It hides the `select` element, and displays a text field for jQuery UI's autocomplete to take over.
 5. It renames the `select` element to nothing, and uses it's name on a hidden `input` that gets submitted to the server instead.
+6. It assumes your `select` elements have an `id` attribute. 
 
 How do I use it?
 ----------------
