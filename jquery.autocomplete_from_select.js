@@ -86,7 +86,10 @@
             $(autoselector).val('');
           }
         }
-      })
+      }).focus(function(){
+          if (this.value == "")
+            $(this).autocomplete("search","");
+        });
     });
 
   };
