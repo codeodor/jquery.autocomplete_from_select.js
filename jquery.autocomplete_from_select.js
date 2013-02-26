@@ -12,7 +12,7 @@
         var additional_match_values = [];
         
         for(var i=0; i < options['additional-match-attributes'].length; i++) {
-          var additional_match_attribute = options['additional-match-attributes'];
+          var additional_match_attribute = options['additional-match-attributes'][i];
           var additional_match_value = '';
           if($(option).data(additional_match_attribute)) additional_match_value = $(option).data(additional_match_attribute).toString().toUpperCase();
           if(additional_match_value.indexOf(searchTerm) >= 0){
