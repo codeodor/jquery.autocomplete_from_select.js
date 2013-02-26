@@ -46,6 +46,7 @@ For example, if you have:
 ````html
   <select name="id" id="need_some_id">
     <option></option>
+    <option value="234" data-other-id="bcd">Bongo Drums</option>
     <option value="123" data-other-id="abc">Blam!</option>
   </select>
 ````
@@ -60,5 +61,7 @@ and set `additional-match-attributes` like this:
 ````
 
 It will match the option shown above if the user starts typing "abc" or if the user starts typing "blam!"
+
+You can also view the <a href="http://codeodor.github.com/jquery.autocomplete_from_select.js/">interactive example</a>.
 
 By [Sammy Larbi](http://www.codeodor.com)
