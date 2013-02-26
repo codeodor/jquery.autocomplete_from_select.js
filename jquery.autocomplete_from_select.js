@@ -6,7 +6,7 @@
     
     function findMatches(selectElement, term) {
       var matches = [];
-      $(selectElement.options).each(function(index, option){
+      $(selectElement).find('option').each(function(index, option){
         var searchTerm = term.toUpperCase();
         var optionText = $(option).text().toString().toUpperCase();
         var additional_match_values = [];
