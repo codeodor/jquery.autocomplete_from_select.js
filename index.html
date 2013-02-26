@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Example Usage of jquery.autocomplete_from_select.js</title>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="jquery.autocomplete_from_select.js"></script>
+    <link href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <select name="id" id="select_id">
+      <option></option>
+      <option value="123" data-other-id="abc">Blam!</option>
+    </select>
+    <script>
+      $('select').autocomplete_from_select({
+         'width': '95%', 
+         'additional-match-attributes': ['other-id']
+       });
+      
+    </script>
+  </body>
+</html>
