@@ -44,7 +44,8 @@ The `additional-match-attributes` option is an array of data attribute names you
 For example, if you have:
 
 ````html
-  <select name="id">
+  <select name="id" id="need_some_id">
+    <option></option>
     <option value="123" data-other-id="abc">Blam!</option>
   </select>
 ````
