@@ -72,9 +72,18 @@
           var term = event.target.value;
           
           var matches = findMatches(selectElement, term);
+          
+          var bestMatchIndex = 0; // we're going to use 0 if we don't find an exact match
+          for(var i=0; i < matches.length; i++){
+            if(matches[i]['label'].toUpperCase() == term.toUpperCase()){
+              bestMatchIndex = i;
+              break;
+            }
+          }
+          
           if(matches.length > 0){
-            $(valueElement).val(matches[0]['select_value']);
-            $(autoselector).val(matches[0]['label']);
+            $(valueElement).val(matches[bestMatchIndex]['select_value']);
+            $(autoselector).val(matches[bestMatchIndex]['label']);
           }
         },
         change: function(event, ui){
