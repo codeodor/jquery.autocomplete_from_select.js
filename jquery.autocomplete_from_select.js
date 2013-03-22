@@ -52,7 +52,7 @@
       
       element.attr('name','');
       
-      textField.autocomplete({
+      var autoselector = textField.autocomplete({
         minLength: 0,
         source: function(request, response){
           var matches = [];
@@ -86,20 +86,25 @@
             $(autoselector).val(matches[bestMatchIndex]['label']);
           }
         },
-        change: function(event, ui){
-          var autoselector = $(event.target);
-          var selectElement = document.getElementById(autoselector.data('select-id'));
-          var valueElement = document.getElementById(autoselector.data('value-id'));
-          
-          if(!ui.item){
-            $(valueElement).val('');
-            $(autoselector).val('');
-          }
+        
+      });
+      
+      textField.focus(function(){
+        if (this.value == "")
+          $(this).autocomplete("search","");
+      });
+      
+      textField.blur(function(){
+        var selectElement = document.getElementById(autoselector.data('select-id'));
+        var valueElement = document.getElementById(autoselector.data('value-id'));
+        var term = autoselector.val();
+        var matches = findMatches(selectElement, term);
+        if(matches.length == 0){
+          $(valueElement).val('');
+          $(autoselector).val('');
         }
-      }).focus(function(){
-          if (this.value == "")
-            $(this).autocomplete("search","");
-        });
+      });
+      
     });
 
   };

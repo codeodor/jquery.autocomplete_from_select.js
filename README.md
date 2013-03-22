@@ -16,11 +16,12 @@ It uses the `option`s from the `select` elements to which it is applied as a dat
 It also takes a few liberties:
 
 1. If you tab over and there were no matches, it clears the text field of input to make it clear no option was selected.
-2. Comparisons are case-insensitive.
-3. It hides the `select` element, and displays a text field for jQuery UI's autocomplete to take over.
-4. It renames the `select` element to nothing, and uses it's name on a hidden `input` that gets submitted to the server instead.
-5. It assumes your `select` elements have an `id` attribute.
-6. It automatically shows all options onfocus when the field is blank.
+2. If you close it without selecting an option, it selects the top option for you.
+3. Comparisons are case-insensitive.
+4. It hides the `select` element, and displays a text field for jQuery UI's autocomplete to take over.
+5. It renames the `select` element to nothing, and uses it's name on a hidden `input` that gets submitted to the server instead.
+6. It assumes your `select` elements have an `id` attribute.
+7. It automatically shows all options onfocus when the field is blank.
 
 How do I use it?
 ----------------
